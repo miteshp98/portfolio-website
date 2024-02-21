@@ -1,0 +1,76 @@
+/* ---
+Animation Of Home section
+--- */
+
+/* ---
+Center Frame
+--- */
+
+.site-frame {
+  animation: swing-in-top-fwd 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+/* ---
+  Navbar Brand 
+  --- */
+
+.navbar-brand {
+  animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s both;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---
+  Work Designaion
+  --- */
+
+.work-designation {
+  position: relative;
+}
+
+.work-designation::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  border-left: 2px solid rgba(0, 0, 0, 0.4);
+  animation: typing 4s steps(25) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: 100%;
+    margin: 0 -5px 0 5px;
+  }
+  100% {
+    left: 0%;
+  }
+}
