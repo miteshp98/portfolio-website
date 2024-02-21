@@ -1,147 +1,395 @@
-@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Darker+Grotesque:wght@300..900&family=Fredoka:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+  1. Use a more-intuitive box-sizing model.
 */
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+h6 {
+  overflow-wrap: break-word;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
 }
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+
+/* Variables */
 
 :root {
-  --font-navbar: "Allerta Stencil", sans-serif;
-  --font-heading: "Fredoka", sans-serif;
-  --font-paragraph: "Darker Grotesque", sans-serif;
+  --border-line: #495464;
+  --primary-color: #202020;
+  --secondary-color: #f5f7f8;
+  --third-color: #bbbfca;
 
-  --color-primary: #1c1c1c;
-  --color-secondary: #00171f;
-  --color-third: #fefbf6;
-  --color-fourth: #141414;
-  --color-fifth: #334866;
+  --header-font-clr: #141414;
+
+  /* --third-color: */
+
+  --font-heading: "Prompt", sans-serif;
+  --font-paragraph: "Quicksand", sans-serif;
+  --font-alternate-01: "Montserrat", sans-serif;
+  --font-alternate-02: "Bodoni Moda", serif;
 }
 
 /* ---
 Main Code Starts From Here
 --- */
+
+body {
+  background-color: var(--border-line);
+}
+
+/* ---
+Border Lines
+--- */
+
+.line {
+  position: fixed;
+  content: "";
+  z-index: 105;
+}
+
+.top {
+  width: 100%;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: var(--border-line);
+}
+
+.right {
+  width: 20px;
+  height: 200%;
+  top: 0;
+  left: 0;
+  background-color: var(--border-line);
+}
+
+.left {
+  width: 20px;
+  height: 200%;
+  top: 0;
+  right: 0;
+  background-color: var(--border-line);
+}
+
+.bottom {
+  width: 100%;
+  height: 20px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--border-line);
+}
+
+/* ---
+Site White Frame
+--- */
+
+.site-frame {
+  min-height: 100dvh;
+  position: relative;
+  z-index: 100;
+  background-color: var(--secondary-color);
+}
+
+/* ---
+Header Section
+--- */
+
+.header-section {
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  top: 20px;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: clamp(1.3em, 3vw, 2.5em);
+  color: var(--header-font-clr);
+}
+
+/* ---
+Home Section
+--- */
+
+.home-section {
+  min-height: 100dvh;
+}
+
+.home-section-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-title {
+  font-family: var(--font-alternate-01);
+  font-size: clamp(2em, 4vw, 4em);
+  color: var(--header-font-clr);
+}
+
+.work-designation {
+  font-size: clamp(0.5em, 1.5vw, 1em);
+  color: var(--primary-color);
+  font-family: var(--font-paragraph);
+  font-weight: 400;
+}
+
+/* ---
+Footer Section
+--- */
+
+.footer-section {
+  width: 98%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+}
+
+.footer-section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.copyright-p {
+  font-size: clamp(0.6em, 0.8vw, 0.8em);
+  font-family: var(--font-paragraph);
+  margin-left: 15px;
+}
+
+.under-devlopment {
+  font-size: clamp(1em, 2vw, 1.5em);
+  font-family: var(--font-alternate-01);
+  font-weight: 600;
+  color: var(--header-font-clr);
+  padding: 10px;
+  margin: 0px 10px;
+}
+
+.social-media-cont {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  margin: 15px;
+}
+
+.mobile {
+  display: none;
+}
+
+.fa-brands {
+  color: var(--header-font-clr);
+  transition: all ease-in-out;
+  font-size: clamp(0.9em, 1.5vw, 1.1em);
+}
+
+.fa-brands:hover {
+  color: var(--border-line);
+  transform: scale(1.1);
+}
+
+/* ---
+Animation Of Home section
+--- */
+
+/* ---
+Center Frame
+--- */
+
+.site-frame {
+  animation: swing-in-top-fwd 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+/* ---
+Navbar Brand 
+--- */
+
+.navbar-brand {
+  animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s both;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---
+Work Designaion
+--- */
+
+.work-designation {
+  position: relative;
+}
+
+.work-designation::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  border-left: 2px solid rgba(0, 0, 0, 0.4);
+  animation: typing 4s steps(25) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: 100%;
+    margin: 0 -5px 0 5px;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+/* ---
+Media Queries
+--- */
+
+@media (max-width: 600px) {
+  /* ---
+  Border Lines 
+  --- */
+
+  .top {
+    height: 15px;
+  }
+
+  .right {
+    width: 15px;
+  }
+
+  .left {
+    width: 15px;
+  }
+
+  .bottom {
+    height: 15px;
+  }
+
+  /* ---
+  Home Section Title
+  --- */
+  .name-title {
+    font-size: clamp(1.5em, 4vw, 4em);
+  }
+
+  /* ---
+  Footer Section
+  --- */
+
+  .desktop {
+    display: none;
+  }
+
+  .footer-section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .copyright-p {
+    display: none;
+  }
+}
