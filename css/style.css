@@ -66,12 +66,12 @@ h6 {
 /* Variables */
 
 :root {
-  --border-line: #495464;
-  --primary-color: #202020;
-  --secondary-color: #f5f7f8;
-  --third-color: #bbbfca;
+  --border-line: #49546434;
+  --primary-color: #f8f9fa;
+  --secondary-color: #3e92cc;
+  --third-color: #2e3440;
 
-  --header-font-clr: #141414;
+  --font-clr: #202020;
 
   /* --third-color: */
 
@@ -84,51 +84,43 @@ h6 {
 /* ---
 Main Code Starts From Here
 --- */
-
 body {
-  background-color: var(--border-line);
+  background-color: var(--primary-color);
 }
 
 /* ---
 Border Lines
 --- */
+.line-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
 .line {
-  position: fixed;
-  content: "";
-  z-index: 105;
-}
-
-.top {
-  width: 100%;
-  height: 20px;
+  position: absolute;
+  width: 20vw;
+  height: 100vh;
+  border-right: 1px solid var(--border-line);
+  z-index: -1;
   top: 0;
-  left: 0;
-  background-color: var(--border-line);
+  vertical-align: top;
 }
 
-.right {
-  width: 20px;
-  height: 200%;
-  top: 0;
-  left: 0;
-  background-color: var(--border-line);
+.line-col-2 {
+  left: 20vw;
 }
 
-.left {
-  width: 20px;
-  height: 200%;
-  top: 0;
-  right: 0;
-  background-color: var(--border-line);
+.line-col-3 {
+  left: 40vw;
 }
 
-.bottom {
-  width: 100%;
-  height: 20px;
-  left: 0;
-  bottom: 0;
-  background-color: var(--border-line);
+.line-col-4 {
+  left: 60vw;
+}
+
+.line-col-5 {
+  left: 80vw;
 }
 
 /* ---
@@ -137,9 +129,6 @@ Site White Frame
 
 .site-frame {
   min-height: 100dvh;
-  position: relative;
-  z-index: 100;
-  background-color: var(--secondary-color);
 }
 
 /* ---
@@ -160,12 +149,13 @@ Header Section
   padding: 1em;
 }
 
-.navbar-brand {
-  font-family: var(--font-heading);
-  font-weight: 500;
-  text-decoration: none;
-  font-size: clamp(1.3em, 3vw, 2.5em);
-  color: var(--header-font-clr);
+.navbar-brand > img {
+  width: max(40px, 60px);
+}
+
+.navbar-brand:focus {
+  outline: 2px solid #2e3440;
+  outline-offset: 2px;
 }
 
 /* ---
@@ -191,12 +181,19 @@ Home Section
 .name-title {
   font-family: var(--font-alternate-01);
   font-size: clamp(2em, 4vw, 4em);
-  color: var(--header-font-clr);
+  font-weight: 600;
+  color: var(--font-clr);
+  max-width: 900px;
+  margin: 0px 40px;
+}
+
+.name-title > strong {
+  color: var(--secondary-color);
 }
 
 .work-designation {
   font-size: clamp(0.5em, 1.5vw, 1em);
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-family: var(--font-paragraph);
   font-weight: 400;
 }
@@ -228,12 +225,13 @@ Footer Section
 }
 
 .under-devlopment {
-  font-size: clamp(1em, 2vw, 1.5em);
-  font-family: var(--font-alternate-01);
-  font-weight: 600;
-  color: var(--header-font-clr);
-  padding: 10px;
-  margin: 0px 10px;
+  position: relative;
+  top: 10%;
+  color: var(--font-clr);
+  font-family: var(--font-paragraph);
+  font-weight: 900;
+  font-size: clamp(1em, 2vw, 1.8em);
+  text-align: center;
 }
 
 .social-media-cont {
@@ -248,41 +246,50 @@ Footer Section
 }
 
 .fa-brands {
-  color: var(--header-font-clr);
+  color: var(--font-clr);
   transition: all ease-in-out;
   font-size: clamp(0.9em, 1.5vw, 1.1em);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .fa-brands:hover {
-  color: var(--border-line);
-  transform: scale(1.1);
+  color: var(--secondary-color);
+  transform: scale(1.4);
+}
+
+.social-media-cont > a:focus {
+  outline: 2px solid #2e3440;
+  outline-offset: 3px;
 }
 
 /* ---
 Media Queries
 --- */
 
+@media (max-width: 1024px) {
+  /* ---
+  Border Lines 
+  --- */
+  .line-col-2 {
+    left: 30vw;
+  }
+
+  .line-col-3 {
+    left: 60vw;
+  }
+
+  .line-col-4 {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   /* ---
   Border Lines 
   --- */
-
-  .top {
-    height: 15px;
+  .line {
+    display: none;
   }
-
-  .right {
-    width: 15px;
-  }
-
-  .left {
-    width: 15px;
-  }
-
-  .bottom {
-    height: 15px;
-  }
-
   /* ---
   Home Section Title
   --- */
@@ -320,22 +327,6 @@ Media Queries
   /* ---
   Border Lines 
   --- */
-
-  .top {
-    height: 5px;
-  }
-
-  .right {
-    width: 5px;
-  }
-
-  .left {
-    width: 5px;
-  }
-
-  .bottom {
-    height: 5px;
-  }
 
   /* ---
   Header Section
