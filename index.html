@@ -19,125 +19,632 @@
       content="A showcase of my work and skills as a web developer | designer | photographer | etc."
     />
 
-    <meta property="og:image" content="https://example.com/your-image.jpg" />
-    <meta property="og:url" content="https://example.com" />
+    <!-- Stylesheer -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/base/bg_pattern.css" />
+    <link rel="stylesheet" href="css/base/loader.css" />
 
-    <title>Mitesh Panchal</title>
-
-    <!-- CSS Stylesheed -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Animation CSS Stylesheet -->
-    <link rel="stylesheet" href="css/animation.css" />
-    <!-- Font Awesome CDN -->
+    <!-- Font awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
 
-    <!-- Favicon Icon -->
+    <!-- Google Font's -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/images/apple-touch-icon.png"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
     />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/favicon.ico"
-    />
-    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <title>Mitesh Panchal | Bringing Designs to Life</title>
   </head>
-  <!-- Main Content Of Website -->
   <body>
-    <!-- Border Lines  -->
-    <div class="line-container">
-      <div class="line line-col-1"></div>
-      <div class="line line-col-2"></div>
-      <div class="line line-col-3"></div>
-      <div class="line line-col-4"></div>
-      <div class="line line-col-5"></div>
-    </div>
-    <!-- Main Content Of Website -->
-    <div class="site-frame">
-      <!-- Header-section -->
-      <header class="header-section">
-        <div class="header-container">
-          <a href="index.html" class="navbar-brand"
-            ><img src="assets/images/Website-logo.png" alt=""
-          /></a>
-        </div>
-      </header>
-      <!-- Main Section -->
-      <main>
-        <section class="home-section">
-          <div class="home-section-container">
-            <h1 class="name-title glitch">
-              Hello, I’m <strong> Mitesh Panchal</strong>, Front-end Developer
-              Based in India.
-            </h1>
-          </div>
-        </section>
-      </main>
+    <!-- BG  -->
+    <div class="container"></div>
 
-      <footer class="footer-section">
-        <div class="footer-section-container">
-          <p class="copyright-p">&#169; 2023 Mitesh. All rights reserved.</p>
-          <p class="under-devlopment">Website Under Devlopment</p>
-          <div class="social-media-cont desktop">
-            <a href="https://www.instagram.com/_mitesh_p/" target="_blank"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="https://github.com/miteshp98" target="_blank"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/mitesh-panchal-356558126/"
-              target="_blank"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a
-              href="https://discord.com/users/560795989213184000"
-              target="_blank"
-              ><i class="fa-brands fa-discord"></i
-            ></a>
-          </div>
+    <!-- Loader -->
+    <span class="loader"></span>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-container">
+        <!-- nav toggle btn -->
+        <button
+          class="nav-toggle-btn"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+          aria-label="Open menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
 
-          <div class="social-media-cont mobile">
-            <a href="https://www.instagram.com/_mitesh_p/" target="_blank"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="https://github.com/miteshp98" target="_blank"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/mitesh-panchal-356558126/"
-              target="_blank"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a
-              href="https://discord.com/users/560795989213184000"
-              target="_blank"
-              ><i class="fa-brands fa-discord"></i
-            ></a>
+        <!-- Navigation wrapper -->
+        <nav
+          class="main-navigation"
+          role="navigation"
+          aria-labelledby="nav-toggle-btn"
+        >
+          <div class="nav-wrapper">
+            <div class="nav-header">
+              <!-- Btn to close nav -->
+              <p class="nav-title">Menu</p>
+              <button
+                class="nav-close-btn"
+                aria-controls="main-navigation"
+                aria-label="Close menu"
+              >
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <!-- Navigation List -->
+            <ul class="nav-list">
+              <!-- List -->
+              <li class="nav-item" aria-current="page">
+                <a href="#home" class="nav-link active">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#home" class="nav-link">
+                  <i class="fa-solid fa-user"></i>
+                  <span>About</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#home" class="nav-link">
+                  <i class="fa-solid fa-briefcase"></i>
+                  <span>Resume</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#home" class="nav-link">
+                  <i class="fa-solid fa-clipboard"></i>
+                  <span>Services</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#home" class="nav-link">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  <span>Skills</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#home" class="nav-link">
+                  <i class="fa-brands fa-fort-awesome"></i>
+                  <span>Portfolio</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#home" class="nav-link">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <!-- Social Links -->
+            <div class="social-media-wrap">
+              <p class="social-title">Social</p>
+              <!-- Wrapper -->
+              <div class="social-links">
+                <a
+                  href="https://www.instagram.com/_mitesh_p/"
+                  class="social-media-link"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/mitesh-panchal-356558126/"
+                  class="social-media-link"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a href="https://github.com/miteshp98" class="social-media-link"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Main Content -->
+
+    <main>
+      <!-- Profile card wrapper -->
+      <div class="profile-card left-sidebar">
+        <div class="profile-card-header">
+          <p class="profile-name">Mitesh <sup>M</sup></p>
+          <p class="profile-title">Frontend Developer</p>
+        </div>
+
+        <div class="profile-image-container">
+          <img src="assets/images/my-image.png" alt="Mitesh Panchal" />
+        </div>
+
+        <p class="profile-location">Based in Ahmedabad, Gujarat</p>
+        <p class="copyright-text">&copy; 2024 Mitesh, All Rights Reserved</p>
+
+        <div class="profile-social-links">
+          <a href="https://www.instagram.com/_mitesh_p/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/mitesh-panchal-356558126/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/miteshp98"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+
+        <button class="hire-me-btn">
+          <i class="fa-regular fa-envelope"></i>Hire Me!
+        </button>
+      </div>
+
+      <!-- Home section -->
+      <section class="home-seciton" id="#home">
+        <!-- hero container -->
+        <div class="hero-wrapper main-container">
+          <div class="custom-width-container">
+            <div class="section-label">
+              <p><i class="fa-solid fa-house"></i>Introduce</p>
+            </div>
+
+            <div class="hero-content">
+              <h1 class="hero-heading">
+                Say Hi From<span> Mitesh </span>, <br />
+                Frontend Developer
+              </h1>
+              <p class="hero-description">
+                I create visually appealing and user-centric web interfaces. My
+                focus is on designing and coding efficient, high-quality
+                experiences. Simplicity and performance drive my passion for web
+                development.
+              </p>
+            </div>
+
+            <div class="hero-call-to-action">
+              <a
+                href="#portfolio"
+                class="cta-portfolio-btn"
+                aria-label="Go to my portfolio section"
+              >
+                <img
+                  src="assets/images/circular-text.png"
+                  alt="My Portfolio circular text"
+                  class="cta-image"
+                />
+                <i class="fa-solid fa-arrow-down-long" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </section>
+      <!-- About Section -->
+      <section class="about-section" id="#about">
+        <!-- About container -->
+        <div class="about-container main-container">
+          <div class="custom-width-container">
+            <div class="section-label">
+              <p><i class="fa-solid fa-user"></i>About</p>
+            </div>
+
+            <div class="about-content">
+              <h2 class="about-heading">
+                Every engaging web experience is crafted with <br />
+                <span> Passion </span> and <span> Precision</span>
+              </h2>
+
+              <p class="about-me">
+                Since starting my career as a video editor and graphic designer,
+                I discovered my passion for visual storytelling. My interest in
+                design grew, and I transitioned into 3D visualization, where my
+                skills as a natural visualizer and strong imagination helped me
+                bring creative concepts to life. As my love for technology and
+                innovation deepened, I entered the world of IT development,
+                where I could combine my imagination and problem-solving
+                abilities to create engaging and user-centric web experiences.
+                I'm constantly learning and refining my skills, always pushing
+                myself to build better digital products.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Resume Section -->
+      <section class="resume-section" id="#resume">
+        <!-- Resume container -->
+        <div class="resume-container main-container">
+          <div class="custom-width-container">
+            <div class="section-label">
+              <p><i class="fa-solid fa-briefcase"></i>Resume</p>
+            </div>
+
+            <div class="resume-content">
+              <h2 class="resume-heading">
+                Education & <span>Experience</span>
+              </h2>
+
+              <div class="timeline-item" id="item-1">
+                <p class="timeline-date">2023 - 2024</p>
+                <h3 class="timeline-role">Career Break</h3>
+
+                <ul class="timeline-details">
+                  <li>
+                    Enhanced HTML, CSS, and JavaScript skills through online
+                    courses.
+                  </li>
+                  <li>
+                    Developed personal projects to apply and solidify concepts.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="timeline-item" id="item-2">
+                <p class="timeline-date">2020 - 2023</p>
+                <h3 class="timeline-role">3D Visualizer</h3>
+                <p class="company-name">KCL Solution Pvt Ltd.</p>
+
+                <ul class="timeline-details">
+                  <li>
+                    Managed multiple projects, consistently meeting deadlines.
+                  </li>
+                  <li>
+                    Effectively prioritized tasks in fast-paced environments.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="timeline-item" id="item-3">
+                <p class="timeline-date">2018 - 2020</p>
+                <h3 class="timeline-role">Video Editor & Graphic Designing</h3>
+                <p class="company-name">Freelancer</p>
+
+                <ul class="timeline-details">
+                  <li>
+                    Edited event and music videos, delivering polished cuts.
+                  </li>
+                  <li>
+                    Collaborated with clients to create visually aligned
+                    designs.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section -->
+      <section class="services-section" id="#services">
+        <!-- Service Container -->
+        <div class="services-container main-container">
+          <div class="custom-width-container">
+            <div class="section-label">
+              <p><i class="fa-solid fa-clipboard"></i>Services</p>
+            </div>
+
+            <div class="services-content">
+              <h2 class="services-heading">My <span>Specializations</span></h2>
+            </div>
+
+            <div class="services-wrapper">
+              <div class="services-item">
+                <h3 class="service-title">
+                  Development <i class="fa-solid fa-code"></i>
+                </h3>
+                <p class="service-description">
+                  I create responsive, interactive websites using HTML, CSS,
+                  JavaScript, Bootstrap, and Sass.
+                </p>
+                <p class="project-count">25 Projects</p>
+              </div>
+
+              <div class="services-item">
+                <h3 class="service-title">
+                  3D Visualization <i class="fa-solid fa-panorama"></i>
+                </h3>
+                <p class="service-description">
+                  I create stunning 3D visualizations that effectively bring
+                  your concepts to life.
+                </p>
+                <p class="project-count">250 Projects</p>
+              </div>
+
+              <div class="services-item">
+                <h3 class="service-title">
+                  Graphic Designing <i class="fa-solid fa-pen-ruler"></i>
+                </h3>
+                <p class="service-description">
+                  I design impactful graphics that effectively communicate your
+                  brand message.
+                </p>
+                <p class="project-count">15 Projects</p>
+              </div>
+
+              <div class="services-item">
+                <h3 class="service-title">
+                  Video Editing <i class="fa-solid fa-video"></i>
+                </h3>
+                <p class="service-description">
+                  I deliver polished video edits that capture your story and
+                  engage your audience.
+                </p>
+                <p class="project-count">55 Projects</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section -->
+      <section class="skills-section" id="#skills">
+        <!-- Skills Container -->
+        <div class="skills-container main-container">
+          <div class="custom-width-container">
+            <div class="section-label">
+              <p><i class="fa-solid fa-wand-magic-sparkles"></i>My Skills</p>
+            </div>
+
+            <div class="skills-content">
+              <h2 class="skills-heading">My <span>Advantages</span></h2>
+            </div>
+
+            <div class="skills-wrapper">
+              <div class="skill-card">
+                <div class="skiils-icon">
+                  <img src="assets/icons/html.png" alt="html" />
+                </div>
+                <p class="skill-title">Html</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skiils-icon">
+                  <img src="assets/icons/css-3.png" alt="Css" />
+                </div>
+                <p class="skill-title">Css</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skiils-icon">
+                  <img src="assets/icons/bootstrap.png" alt="Bootstrap" />
+                </div>
+                <p class="skill-title">Bootstrap</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skiils-icon">
+                  <img src="assets/icons/sass.png" alt="Sass" />
+                </div>
+                <p class="skill-title">Sass</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skiils-icon">
+                  <img src="assets/icons/javascript.png" alt="Javascript" />
+                </div>
+                <p class="skill-title">Javascript</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skiils-icon">
+                  <img src="assets/icons/illustrator.png" alt="Illustrator" />
+                </div>
+                <p class="skill-title">Illustrator</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skiils-icon">
+                  <img src="assets/icons/photoshop.png" alt="Photoshop" />
+                </div>
+                <p class="skill-title">Photoshop</p>
+              </div>
+
+              <div class="skill-card">
+                <div class="skiils-icon">
+                  <img src="assets/icons/premier.png" alt="Premiere Pro" />
+                </div>
+                <p class="skill-title">Premiere Pro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Portfolio Section -->
+      <section class="portfolio-section" id="#portfolio">
+        <!-- Portfolio container -->
+        <div class="portfolio-container main-container">
+          <div class="custom-width-container">
+            <div class="section-label">
+              <p><i class="fa-brands fa-fort-awesome"></i>Portfolio</p>
+            </div>
+
+            <div class="portfolio-content">
+              <h2 class="portfolio-heading">Featured <span> Projects</span></h2>
+            </div>
+
+            <div class="portfolio-wrapper">
+              <div class="portfolio-card">
+                <div class="portfolio-img-wrap">
+                  <img
+                    src="assets/images/portfolio/weather-gaze-app-min.png"
+                    alt="Weather Gaze App"
+                    loading="lazy"
+                  />
+
+                  <div class="tech-tags">
+                    <span class="tech-tag">Html</span>
+                    <span class="tech-tag">Css</span>
+                    <span class="tech-tag">Sass</span>
+                    <span class="tech-tag">Javascript</span>
+                  </div>
+                </div>
+                <a
+                  class="portfolio-link"
+                  href="https://weathergaze.netlify.app/"
+                >
+                  Weather Gaze | Weather Dashboard
+                </a>
+              </div>
+
+              <div class="portfolio-card">
+                <div class="portfolio-img-wrap">
+                  <img
+                    src="assets/images/portfolio/crowdfunding-app-min.png"
+                    alt="CrowdFunding App"
+                    loading="lazy"
+                  />
+
+                  <div class="tech-tags">
+                    <span class="tech-tag">Html</span>
+                    <span class="tech-tag">Css</span>
+                    <span class="tech-tag">Javascript</span>
+                  </div>
+                </div>
+                <a
+                  class="portfolio-link"
+                  href="https://miteshp98.github.io/crowdfunding-product-page-main/"
+                >
+                  Crowdfunding Product Page
+                </a>
+              </div>
+
+              <div class="portfolio-card">
+                <div class="portfolio-img-wrap">
+                  <img
+                    src="assets/images/portfolio/to-do-app-min.png"
+                    alt="To Do App"
+                    loading="lazy"
+                  />
+
+                  <div class="tech-tags">
+                    <span class="tech-tag">Html</span>
+                    <span class="tech-tag">Css</span>
+                    <span class="tech-tag">Javascript</span>
+                  </div>
+                </div>
+                <a
+                  class="portfolio-link"
+                  href="https://to-do-app-challenge.netlify.app/"
+                >
+                  To Do App
+                </a>
+              </div>
+
+              <div class="portfolio-card">
+                <div class="portfolio-img-wrap">
+                  <img
+                    src="assets/images/portfolio/shopping-car-app-min.png"
+                    alt="Shopping Cart System App"
+                    loading="lazy"
+                  />
+
+                  <div class="tech-tags">
+                    <span class="tech-tag">Html</span>
+                    <span class="tech-tag">Css</span>
+                    <span class="tech-tag">Javascript</span>
+                  </div>
+                </div>
+                <a
+                  class="portfolio-link"
+                  href="https://miteshp98.github.io/product-list-with-cart-main/"
+                >
+                  Product list with cart solution
+                </a>
+              </div>
+
+              <div class="portfolio-card">
+                <div class="portfolio-img-wrap">
+                  <img
+                    src="assets/images/portfolio/tastyNchill-app-min.png"
+                    alt="Taste N Chill Site"
+                    loading="lazy"
+                  />
+
+                  <div class="tech-tags">
+                    <span class="tech-tag">Html</span>
+                    <span class="tech-tag">Css</span>
+                    <span class="tech-tag">Javascript</span>
+                  </div>
+                </div>
+                <a
+                  class="portfolio-link"
+                  href="https://tastynchill.netlify.app/"
+                >
+                  TastyNChill: Savor the Chill in Every Bite
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section class="contact-section" id="#contact">
+        <!-- Contact container -->
+        <div class="contact-container main-container">
+          <div class="custom-width-container">
+            <div class="section-label">
+              <p><i class="fa-solid fa-envelope"></i>Contact</p>
+            </div>
+
+            <div class="contact-content">
+              <h2 class="contact-heading">Let's Work <span>Together!</span></h2>
+              <a href="mailto: miteshpanchal3d@gmail.com" class="contact-email"
+                >miteshpanchal3d@gmail.com</a
+              >
+            </div>
+
+            <div class="contact-form-container">
+              <h3 class="contact-title">Fill this form out</h3>
+              <form action="">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="input-field name-input"
+                  required
+                  placeholder="Name"
+                />
+
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="input-field email-input"
+                  required
+                  placeholder="Email"
+                />
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                  class="input-field message-textarea"
+                ></textarea>
+
+                <button class="submit-btn contact-submit-btn">
+                  Send Email
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="js/index.js" defer></script>
+    <script type="module" src="js/smoothscoller.js" defer></script>
   </body>
 </html>
