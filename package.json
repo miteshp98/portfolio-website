@@ -1,0 +1,38 @@
+{
+  "name": "mitesh-portfolio",
+  "version": "1.0.0",
+  "description": "A personal portfolio website for Mitesh Panchal, Mitesh Panchal's web development portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miteshp98/portfolio-website.git"
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "web",
+    "development",
+    "Mitesh",
+    "Panchal"
+  ],
+  "author": "Mitesh Panchal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miteshp98/portfolio-website/issues"
+  },
+  "homepage": "https://github.com/miteshp98/portfolio-website#readme",
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
+    "locomotive-scroll": "^4.1.4",
+    "sass": "^1.80.3",
+    "smooth-scrollbar": "^8.8.4"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
