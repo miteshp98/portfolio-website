@@ -1,0 +1,117 @@
+@import "../base/variables";
+
+@mixin flex($direction, $align, $justify, $gap) {
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+.contact-section {
+  padding-bottom: 4rem;
+}
+
+.contact-content {
+  margin-block: 2rem;
+
+  h2 {
+    font-size: 2.3em;
+    line-height: 1.2;
+    font-family: $font-montserrat;
+    margin-block: 2rem;
+    font-weight: 500;
+    color: white;
+    text-wrap: balance;
+
+    span {
+      color: $accent-color;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+  }
+}
+
+.contact-form-container {
+  margin-block: 2.5rem;
+
+  h3 {
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+form {
+  margin-top: 1rem;
+
+  display: flex;
+  @include flex(column, normal, normal, 0);
+
+  label {
+    margin-block: 2rem 0.3rem;
+    color: white;
+    font-size: 0.9em;
+  }
+
+  input {
+    width: 100%;
+    height: 50px;
+    padding-inline: 15px;
+    background-color: transparent;
+    border: 1px solid $border-color;
+    color: white;
+    font-size: 0.95em;
+
+    &:hover {
+      border-color: $accent-color;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $accent-color;
+    }
+  }
+
+  textarea {
+    height: 100px;
+    width: 100%;
+    border: 1px solid $border-color;
+    background-color: transparent;
+    color: white;
+    font-size: 0.95em;
+    resize: none;
+    padding: 10px 15px;
+  }
+
+  button {
+    margin-top: 25px;
+    width: 100%;
+    height: 55px;
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    font-weight: 500;
+    border-radius: 50px;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-content {
+    h2 {
+      font-size: 3em;
+    }
+
+    a {
+      font-size: 1.1em;
+    }
+  }
+  form {
+    button {
+      margin-top: 40px;
+    }
+  }
+}

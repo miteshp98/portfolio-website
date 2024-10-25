@@ -1,0 +1,120 @@
+@import "../base/variables";
+
+@mixin flex($direction, $align, $justify, $gap) {
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+.portfolio-content {
+  margin-block: 2rem;
+
+  h2 {
+    color: white;
+    font-size: 2.4em;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-block: 1rem 2rem;
+    font-family: $font-montserrat;
+    text-wrap: balance;
+
+    span {
+      color: $accent-color;
+    }
+  }
+}
+
+.portfolio-wrapper {
+  margin-block: 3rem;
+
+  display: flex;
+  @include flex(column, normal, normal, 20px);
+}
+
+.portfolio-img-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-block: 2rem;
+
+  img {
+    border-radius: 20px;
+    width: 100%;
+    filter: brightness(60%);
+  }
+
+  .tech-tags {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    @include flex(row, center, normal, 10px);
+
+    .tech-tag {
+      padding: 8px 25px;
+      border-radius: 50px;
+      background-color: white;
+      font-size: 0.75em;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.322);
+      font-weight: 500;
+    }
+  }
+}
+
+.portfolio-link {
+  display: inline-block;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-content {
+    h2 {
+      font-size: 3em;
+    }
+  }
+
+  .portfolio-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 0.5fr);
+    gap: 25px;
+  }
+
+  .portfolio-card:nth-of-type(1) {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .portfolio-card:nth-of-type(2) {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .portfolio-card:nth-of-type(3) {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .portfolio-card:nth-of-type(4) {
+    grid-area: 3 / 1 / 4 / 3;
+  }
+  .portfolio-card:nth-of-type(5) {
+    grid-area: 4 / 1 / 5 / 3;
+  }
+
+  .portfolio-img-wrap {
+    .tech-tags {
+      left: 15px;
+      bottom: 20px;
+    }
+  }
+
+  .portfolio-link {
+    font-size: 1.3em;
+    font-weight: 400;
+  }
+}

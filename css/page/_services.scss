@@ -1,0 +1,83 @@
+@import "../base/variables";
+
+@mixin flex($direction, $align, $justify, $gap) {
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+.services-content {
+  margin-block: 2rem;
+  color: white;
+
+  h2 {
+    font-family: $font-montserrat;
+    font-size: 2.25em;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-block: 1rem 2rem;
+
+    span {
+      color: $accent-color;
+    }
+  }
+}
+
+.services-wrapper {
+  margin-block: 2rem;
+  display: flex;
+  @include flex(column, flex-start, none, 25px);
+  color: white;
+
+  .services-item {
+    width: 100%;
+    height: 230px;
+    padding: 25px;
+    border: 1.5px solid $border-color;
+    border-radius: 20px;
+    display: flex;
+    @include flex(column, flex-start, none, 25px);
+    transition: all 0.3s ease-in-out;
+
+    .service-title {
+      width: 100%;
+      display: flex;
+      @include flex(row, center, space-between, 20px);
+      font-weight: 400;
+
+      i {
+        color: $accent-color;
+      }
+    }
+
+    p {
+      color: $font-gray;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    .project-count {
+      color: white;
+    }
+
+    &:hover {
+      border-color: $accent-color;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .services-content {
+    h2 {
+      font-size: 3em;
+    }
+  }
+
+  .services-wrapper {
+    @include flex(row, center, center, 20px);
+    flex-wrap: wrap;
+    .services-item {
+      flex: 1 0 45%;
+    }
+  }
+}

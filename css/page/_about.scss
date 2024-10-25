@@ -1,0 +1,53 @@
+@import "../base/variables";
+
+@mixin flex($direction, $align, $justify, $gap) {
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+.about-content {
+  margin-block: 2rem;
+
+  h2 {
+    font-size: 2em;
+    color: white;
+    font-weight: 500;
+    text-wrap: balance;
+    line-height: 1.4;
+    margin-block: 1rem 2rem;
+    font-family: $font-montserrat;
+
+    span {
+      color: $accent-color;
+    }
+  }
+
+  .about-me {
+    font-size: 0.85em;
+    color: $font-gray;
+    line-height: 30px;
+    text-wrap: balance;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-content {
+    h2 {
+      font-size: 3em;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-content {
+    h2 {
+      font-size: 3em;
+    }
+
+    .about-me {
+      text-wrap: wrap;
+    }
+  }
+}

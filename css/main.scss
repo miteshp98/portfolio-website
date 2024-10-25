@@ -1,0 +1,46 @@
+// Component
+@import "./component/header";
+@import "./component/profile_card";
+
+@import "./base/scrollbar";
+
+// Pages
+@import "./page/home";
+@import "./page/about";
+@import "./page/resume";
+@import "./page/services";
+@import "./page/skills";
+@import "./page/portfolio";
+@import "./page/contact";
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    max-width: 1130px;
+    margin: 0 auto;
+  }
+
+  .custom-width-container {
+    width: 780px;
+    margin: auto;
+    padding-inline: 10px;
+  }
+}
+
+@media screen and (min-width: 1230px) {
+  .custom-width-container {
+    margin: 0 0 0 auto;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .custom-width-container {
+    width: 800px;
+    margin: 0 0 0 auto;
+  }
+}
+
+@media screen and (min-width: 1750px) {
+  .custom-width-container {
+    width: 900px;
+  }
+}

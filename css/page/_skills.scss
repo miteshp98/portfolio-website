@@ -1,0 +1,80 @@
+@import "../base/variables";
+
+@mixin flex($direction, $align, $justify, $gap) {
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+.skills-content {
+  margin-block: 2rem;
+
+  h2 {
+    color: white;
+    font-weight: 500;
+    font-family: $font-montserrat;
+    font-size: 2.1em;
+
+    span {
+      color: $accent-color;
+    }
+  }
+}
+
+.skills-wrapper {
+  margin-block: 3rem;
+  display: flex;
+  @include flex(row, normal, normal, 0);
+  flex-wrap: wrap;
+
+  .skill-card {
+    flex: 1 0 45%;
+    padding-inline: 10px;
+
+    .skiils-icon {
+      margin-block: 0 2rem;
+      position: relative;
+      padding: 120px 50px;
+      border: 2px solid $border-color;
+      border-radius: 85px;
+      transition: all 0.3s ease-in-out;
+
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        filter: saturate(80%);
+      }
+    }
+
+    .skill-title {
+      margin-bottom: 2rem;
+      text-align: center;
+      color: white;
+      font-size: 0.95em;
+    }
+
+    &:hover {
+      .skiils-icon {
+        border-color: $accent-color;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .skills-content {
+    h2 {
+      font-size: 3em;
+    }
+  }
+
+  .skills-wrapper {
+    .skill-card {
+      flex: 1 0 25%;
+    }
+  }
+}
