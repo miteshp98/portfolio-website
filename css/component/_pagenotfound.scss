@@ -1,0 +1,35 @@
+@use "../base/variables";
+
+.error-container {
+  width: 100%;
+  height: 100dvh;
+  color: white;
+  font-family: variables.$font-montserrat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .error-code {
+    font-size: clamp(7.5em, 15vw, 15em);
+  }
+
+  a {
+    margin-block: 20px;
+    text-decoration: none;
+    background-color: variables.$accent-color;
+    color: white;
+
+    width: 100px;
+    padding-block: 5px;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid variables.$accent-color;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

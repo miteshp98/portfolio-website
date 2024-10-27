@@ -1,4 +1,4 @@
-@import "../base/variables";
+@use "../base/variables";
 
 @mixin flex($direction, $align, $justify, $gap) {
   flex-direction: $direction;
@@ -17,16 +17,16 @@
     text-wrap: balance;
     line-height: 1.4;
     margin-block: 1rem 2rem;
-    font-family: $font-montserrat;
+    font-family: variables.$font-montserrat;
 
     span {
-      color: $accent-color;
+      color: variables.$accent-color;
     }
   }
 
   .about-me {
     font-size: 0.85em;
-    color: $font-gray;
+    color: variables.$font-gray;
     line-height: 30px;
     text-wrap: balance;
   }

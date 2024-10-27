@@ -1,4 +1,4 @@
-@import "../base/variables";
+@use "../base/variables";
 
 @mixin flex($direction, $align, $justify, $gap) {
   flex-direction: $direction;
@@ -12,14 +12,14 @@
   margin-block: 2rem;
 
   .resume-heading {
-    font-family: $font-montserrat;
+    font-family: variables.$font-montserrat;
     font-size: 2.3em;
     font-weight: 500;
     line-height: 1.4;
     margin-block: 0 2.5rem;
 
     span {
-      color: $accent-color;
+      color: variables.$accent-color;
     }
   }
 }
@@ -32,7 +32,7 @@
   @include flex(column, normal, none, 5px);
 
   .timeline-date {
-    color: $font-gray;
+    color: variables.$font-gray;
     letter-spacing: 2px;
     font-size: 0.85em;
     transition: all 0.2s ease-in-out;
@@ -61,10 +61,10 @@
 
   &:hover {
     &::before {
-      background-color: $accent-color;
+      background-color: variables.$accent-color;
     }
     .timeline-date {
-      color: $accent-color;
+      color: variables.$accent-color;
     }
   }
 }
@@ -85,7 +85,7 @@
   list-style: none;
   margin-block: 1rem;
   padding: 0;
-  color: $font-gray;
+  color: variables.$font-gray;
 
   display: flex;
   @include flex(column, flex-start, none, 15px);

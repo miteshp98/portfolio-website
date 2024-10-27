@@ -1,4 +1,4 @@
-@import "../base/variables";
+@use "../base/variables";
 
 @mixin flex($direction, $align, $justify, $gap) {
   flex-direction: $direction;
@@ -12,14 +12,14 @@
   color: white;
 
   h2 {
-    font-family: $font-montserrat;
+    font-family: variables.$font-montserrat;
     font-size: 2.25em;
     line-height: 1.5;
     font-weight: 500;
     margin-block: 1rem 2rem;
 
     span {
-      color: $accent-color;
+      color: variables.$accent-color;
     }
   }
 }
@@ -34,7 +34,7 @@
     width: 100%;
     height: 230px;
     padding: 25px;
-    border: 1.5px solid $border-color;
+    border: 1.5px solid variables.$border-color;
     border-radius: 20px;
     display: flex;
     @include flex(column, flex-start, none, 25px);
@@ -47,12 +47,12 @@
       font-weight: 400;
 
       i {
-        color: $accent-color;
+        color: variables.$accent-color;
       }
     }
 
     p {
-      color: $font-gray;
+      color: variables.$font-gray;
       font-size: 0.95em;
       line-height: 1.5;
     }
@@ -62,7 +62,7 @@
     }
 
     &:hover {
-      border-color: $accent-color;
+      border-color: variables.$accent-color;
     }
   }
 }

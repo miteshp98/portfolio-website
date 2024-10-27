@@ -1,10 +1,14 @@
-@import "../base/variables";
+@use "../base/variables";
 
 @mixin flex($direction, $align, $justify, $gap) {
   flex-direction: $direction;
   align-items: $align;
   justify-content: $justify;
   gap: $gap;
+}
+
+header {
+  overflow: hidden;
 }
 
 .header-container {
@@ -21,40 +25,46 @@
   width: 60px;
   height: 60px;
 
-  border: 1px solid $border-color;
+  border: 1px solid variables.$border-color;
   border-radius: 50%;
-  background-color: $dark-bg-color;
+  background-color: variables.$dark-bg-color;
   font-size: 1.4em;
-  color: $font-gray;
+  color: variables.$font-gray;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  z-index: 111;
+  z-index: 10;
 
   &:hover {
-    color: $accent-color;
-    border-color: $accent-color;
+    color: variables.$accent-color;
+    border-color: variables.$accent-color;
   }
 
   &:focus-visible {
-    color: $accent-color;
-    border-color: $accent-color;
+    color: variables.$accent-color;
+    border-color: variables.$accent-color;
     outline: none;
   }
 }
 
 .main-navigation {
-  display: none;
-  position: absolute;
+  display: block;
+  position: fixed;
   height: 100%;
   width: 100%;
   max-width: 475px;
   top: 0;
-  right: 0;
-  background-color: $dark-secondary-bg;
+  right: -100%;
+  background-color: variables.$dark-secondary-bg;
   overflow-x: hidden;
   padding-block: 5rem;
 
-  font-family: $font-sans;
+  font-family: variables.$font-sans;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+
+.expand-navbar {
+  right: 0;
 }
 
 .nav-wrapper {
@@ -71,7 +81,7 @@
   margin-block: 0 25px;
 
   p {
-    color: $font-gray;
+    color: variables.$font-gray;
     font-size: 1.2em;
   }
 
@@ -83,13 +93,13 @@
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      color: $accent-color;
+      color: variables.$accent-color;
     }
 
     &:focus-visible {
-      outline: 1px solid $accent-color;
+      outline: 1px solid variables.$accent-color;
       outline-offset: 2px;
-      color: $accent-color;
+      color: variables.$accent-color;
     }
   }
 }
@@ -105,7 +115,7 @@
   li {
     width: 100%;
     .nav-link {
-      color: $font-gray;
+      color: variables.$font-gray;
       display: flex;
       @include flex(row, center, nomral, 15px);
       text-decoration: none;
@@ -119,7 +129,7 @@
         color: white;
 
         i {
-          color: $accent-color;
+          color: variables.$accent-color;
         }
       }
 
@@ -129,20 +139,20 @@
         outline-offset: 3px;
 
         i {
-          color: $accent-color;
+          color: variables.$accent-color;
         }
       }
     }
 
     .active {
-      color: $accent-color;
+      color: variables.$accent-color;
     }
   }
 }
 
 .social-media-wrap {
   .social-title {
-    color: $font-gray;
+    color: variables.$font-gray;
   }
 
   .social-links {
@@ -151,16 +161,16 @@
     @include flex(row, center, none, 15px);
 
     a {
-      color: $font-gray;
+      color: variables.$font-gray;
       font-size: 0.9em;
 
       &:hover {
-        color: $accent-color;
+        color: variables.$accent-color;
       }
 
       &:focus-visible {
         outline: none;
-        color: $accent-color;
+        color: variables.$accent-color;
       }
     }
   }
@@ -186,8 +196,8 @@
     right: 3rem;
     transform: translateY(-50%);
     border-radius: 50px;
-    background-color: $dark-bg-color;
-    border: 2px solid $border-color;
+    background-color: variables.$dark-bg-color;
+    border: 2px solid variables.$border-color;
     overflow: visible;
   }
 
@@ -208,7 +218,36 @@
         justify-content: center;
 
         span {
-          display: none;
+          position: absolute;
+          left: -65px;
+          width: 65px;
+          background-color: variables.$dark-secondary-bg;
+          font-size: 0.8em;
+          text-align: center;
+          border-radius: 5px;
+          padding-block: 5px;
+          font-weight: 600;
+          pointer-events: none;
+          color: variables.$font-gray;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+
+          &::after {
+            position: absolute;
+            content: "";
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%) rotate(50deg);
+            width: 10px;
+            height: 10px;
+            background-color: variables.$dark-secondary-bg;
+          }
+        }
+
+        &:hover {
+          span {
+            opacity: 1;
+          }
         }
       }
     }

@@ -1,17 +1,49 @@
 // Component
-@import "./component/header";
-@import "./component/profile_card";
+@use "./component/header";
+@use "./component/profile_card";
+@use "./component/pagenotfound";
 
-@import "./base/scrollbar";
+@use "./base/cursor";
 
 // Pages
-@import "./page/home";
-@import "./page/about";
-@import "./page/resume";
-@import "./page/services";
-@import "./page/skills";
-@import "./page/portfolio";
-@import "./page/contact";
+@use "./page/home";
+@use "./page/about";
+@use "./page/resume";
+@use "./page/services";
+@use "./page/skills";
+@use "./page/portfolio";
+@use "./page/contact";
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+body {
+  --sb-track-color: #191919;
+  --sb-thumb-color: #eb5e28;
+  --sb-size: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 5px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
 
 @media screen and (min-width: 768px) {
   .main-container {
@@ -20,7 +52,7 @@
   }
 
   .custom-width-container {
-    width: 780px;
+    width: 750px;
     margin: auto;
     padding-inline: 10px;
   }
@@ -29,6 +61,7 @@
 @media screen and (min-width: 1230px) {
   .custom-width-container {
     margin: 0 0 0 auto;
+    width: 780px;
   }
 }
 

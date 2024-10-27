@@ -1,10 +1,14 @@
-@import "../base/variables";
+@use "../base/variables";
 
 @mixin flex($direction, $align, $justify, $gap) {
   flex-direction: $direction;
   align-items: $align;
   justify-content: $justify;
   gap: $gap;
+}
+
+.portfolio-section {
+  height: 100%;
 }
 
 .portfolio-content {
@@ -16,11 +20,11 @@
     font-weight: 500;
     line-height: 1.5;
     margin-block: 1rem 2rem;
-    font-family: $font-montserrat;
+    font-family: variables.$font-montserrat;
     text-wrap: balance;
 
     span {
-      color: $accent-color;
+      color: variables.$accent-color;
     }
   }
 }
