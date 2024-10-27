@@ -77,10 +77,7 @@ class FormValidation {
 
       if (!btn) return;
 
-      if (this._validateUserInput()) {
-        alert("Thanks for your submission!");
-        this._clearInputField();
-      } else {
+      if (!this._validateUserInput()) {
         e.preventDefault();
       }
     });
