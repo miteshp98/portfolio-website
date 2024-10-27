@@ -34,6 +34,9 @@ header {
   transition: all 0.2s ease-in-out;
   z-index: 10;
 
+  display: flex;
+  @include flex(row, center, center, 0px);
+
   &:hover {
     color: variables.$accent-color;
     border-color: variables.$accent-color;
