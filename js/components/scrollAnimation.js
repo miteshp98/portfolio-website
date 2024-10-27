@@ -174,7 +174,6 @@ class TriggerManager {
         start: "top 100%",
         end: "top 50%",
         scrub: 1,
-        markers: true,
       },
       y: 500,
       opacity: 0,
