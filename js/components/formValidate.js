@@ -70,18 +70,6 @@ class FormValidation {
       this._errorMsg.forEach((error) => (error.textContent = ""));
     }, 3000);
   }
-
-  _handleSubmitBtn() {
-    this._form.addEventListener("click", (e) => {
-      const btn = e.target.closest(".submit-btn");
-
-      if (!btn) return;
-
-      if (!this._validateUserInput()) {
-        e.preventDefault();
-      }
-    });
-  }
 }
 
 export default FormValidation;
