@@ -58,10 +58,9 @@
     @include flex(row, center, normal, 10px);
 
     .tech-tag {
-      padding: 8px 25px;
+      padding: 5px 20px;
       border-radius: 50px;
-      background-color: white;
-      font-size: 0.75em;
+      font-size: 0.65em;
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.322);
       font-weight: 500;
     }
