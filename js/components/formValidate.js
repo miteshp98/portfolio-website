@@ -6,7 +6,6 @@ class FormValidation {
 
   constructor() {
     this._handleFormSubmission();
-    this._handleSubmitBtn();
   }
 
   _validateUserInput() {
