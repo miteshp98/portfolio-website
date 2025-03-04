@@ -1,706 +1,690 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Basics -->
-    <meta charset="UTF-8" />
-    <!-- Responsive Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Site & SEO Meta -->
-    <meta
-      name="description"
-      content="A showcase of my work and skills as a web developer | designer | photographer | etc."
-    />
-    <meta name="keywords" content="web development, design, portfolio" />
-    <meta name="author" content="Mitesh Panchal" />
+    <head>
+        <!-- Basics -->
+        <meta charset="UTF-8" />
+        <!-- Responsive Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Site & SEO Meta -->
+        <meta
+            name="description"
+            content="A showcase of my work and skills as a web developer | designer | photographer | etc."
+        />
+        <meta name="keywords" content="web development, design, portfolio" />
+        <meta name="author" content="Mitesh Panchal" />
 
-    <meta property="og:title" content="Mitesh Panchal - Portfolio" />
-    <meta
-      property="og:description"
-      content="A showcase of my work and skills as a web developer | designer | photographer | etc."
-    />
+        <meta property="og:title" content="Mitesh Panchal - Portfolio" />
+        <meta
+            property="og:description"
+            content="A showcase of my work and skills as a web developer | designer | photographer | etc."
+        />
 
-    <!-- Stylesheer -->
-    <link rel="stylesheet" href="css/main.scss" />
-    <link rel="stylesheet" href="css/base/reset.css" />
-    <link rel="stylesheet" href="css/base/bg_pattern.css" />
-    <link rel="stylesheet" href="css/base/loader.css" />
+        <!-- Stylesheer -->
+        <link rel="stylesheet" href="css/main.scss" />
+        <link rel="stylesheet" href="css/base/reset.css" />
+        <link rel="stylesheet" href="css/base/bg_pattern.css" />
+        <link rel="stylesheet" href="css/base/loader.css" />
 
-    <!-- Font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+        <!-- Font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
-    <!-- Google Font's -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
+        <!-- Google Font's -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
-    />
-    <meta name="apple-mobile-web-app-title" content="MadeByMitesh" />
-    <link rel="manifest" href="site.webmanifest" />
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="MadeByMitesh" />
+        <link rel="manifest" href="site.webmanifest" />
 
-    <title>Mitesh Panchal | Bringing Designs to Life</title>
-  </head>
-  <body>
-    <!-- BG  -->
-    <div class="bg-overlay"></div>
+        <title>Mitesh Panchal | Bringing Designs to Life</title>
+    </head>
+    <body>
+        <!-- BG  -->
+        <div class="bg-overlay"></div>
 
-    <!-- Loader -->
-    <div class="loader-container">
+        <!-- Loader -->
+        <!-- <div class="loader-container">
       <span class="loader"></span>
-    </div>
-    <!-- Header -->
-    <header class="site-header" id="header">
-      <div class="header-container">
-        <!-- nav toggle btn -->
-        <button
-          class="nav-toggle-btn"
-          aria-expanded="false"
-          aria-controls="main-navigation"
-          aria-label="Open menu"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <!-- Navigation wrapper -->
-        <nav
-          class="main-navigation fade-in-right"
-          role="navigation"
-          aria-labelledby="nav-toggle-btn"
-        >
-          <div class="nav-wrapper">
-            <div class="nav-header">
-              <!-- Btn to close nav -->
-              <p class="nav-title">Menu</p>
-              <button
-                class="nav-close-btn"
-                aria-controls="main-navigation"
-                aria-label="Close menu"
-              >
-                <i class="fa-solid fa-xmark"></i>
-              </button>
-            </div>
-
-            <!-- Navigation List -->
-            <ul class="nav-list">
-              <!-- List -->
-              <li class="nav-item">
-                <a
-                  href="#home"
-                  class="nav-link page-link active"
-                  data-scroll
-                  aria-current="page"
+    </div> -->
+        <!-- Header -->
+        <header class="site-header" id="header">
+            <div class="header-container">
+                <!-- nav toggle btn -->
+                <button
+                    class="nav-toggle-btn"
+                    aria-expanded="false"
+                    aria-controls="main-navigation"
+                    aria-label="Open menu"
                 >
-                  <i class="fa-solid fa-house"></i>
-                  <span>Home</span>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#about" class="nav-link page-link" data-scroll>
-                  <i class="fa-solid fa-user"></i>
-                  <span>About</span>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#resume" class="nav-link page-link" data-scroll>
-                  <i class="fa-solid fa-briefcase"></i>
-                  <span>Resume</span>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#services" class="nav-link page-link" data-scroll>
-                  <i class="fa-solid fa-clipboard"></i>
-                  <span>Services</span>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#skills" class="nav-link page-link" data-scroll>
-                  <i class="fa-solid fa-wand-magic-sparkles"></i>
-                  <span>Skills</span>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#portfolio" class="nav-link page-link" data-scroll>
-                  <i class="fa-brands fa-fort-awesome"></i>
-                  <span>Portfolio</span>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#contact" class="nav-link page-link" data-scroll>
-                  <i class="fa-solid fa-envelope"></i>
-                  <span>Contact</span>
-                </a>
-              </li>
-            </ul>
-
-            <!-- Social Links -->
-            <div class="social-media-wrap">
-              <p class="social-title">Social</p>
-              <!-- Wrapper -->
-              <div class="social-links">
-                <a
-                  href="https://www.instagram.com/_mitesh_p/"
-                  class="social-media-link"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-                <a
-                  href="https://www.linkedin.com/in/mitesh-panchal-356558126/"
-                  class="social-media-link"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="fa-brands fa-linkedin"></i
-                ></a>
-                <a
-                  href="https://github.com/miteshp98"
-                  class="social-media-link"
-                  target="_blank"
-                  rel="noopener"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-
-      <!-- Profile Card -->
-      <div class="profile-card d-profile-card">
-        <div class="profile-card-header">
-          <p class="profile-name">Mitesh <sup>M</sup></p>
-          <p class="profile-title">Frontend Developer</p>
-        </div>
-
-        <div class="profile-image-container">
-          <img src="assets/images/my-image.png" alt="Mitesh Panchal" />
-        </div>
-
-        <p class="profile-location">Based in Ahmedabad, Gujarat</p>
-        <p class="copyright-text">&copy; 2024 Mitesh, All Rights Reserved</p>
-
-        <div class="profile-social-links">
-          <a
-            href="https://www.instagram.com/_mitesh_p/"
-            target="_blank"
-            rel="noopener"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/mitesh-panchal-356558126/"
-            target="_blank"
-            rel="noopener"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/miteshp98" target="_blank" rel="noopener"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-        </div>
-
-        <a class="hire-me-btn page-link" href="#contact" data-scroll>
-          <i class="fa-regular fa-envelope"></i>Hire Me!
-        </a>
-      </div>
-    </header>
-    <!-- Main Content -->
-
-    <main>
-      <!-- Home section -->
-      <section class="home-section" id="home">
-        <!-- hero container -->
-        <div class="hero-wrapper main-container">
-          <div class="custom-width-container">
-            <div class="section-label">
-              <p><i class="fa-solid fa-house"></i>Introduce</p>
-            </div>
-
-            <div class="hero-content">
-              <h1 class="hero-heading">
-                Say Hi From<span> Mitesh </span>, <br />
-                Frontend Developer
-              </h1>
-              <p class="hero-description">
-                I create visually appealing and user-centric web interfaces. My
-                focus is on designing and coding efficient, high-quality
-                experiences. Simplicity and performance drive my passion for web
-                development.
-              </p>
-            </div>
-
-            <div class="hero-call-to-action">
-              <a
-                href="#portfolio"
-                data-scroll
-                class="cta-portfolio-btn page-link"
-                aria-label="Go to my portfolio section"
-              >
-                <img
-                  src="assets/images/circular-text.png"
-                  alt="My Portfolio circular text"
-                  class="cta-image"
-                />
-                <i class="fa-solid fa-arrow-down-long" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- About Section -->
-      <section class="about-section" id="about">
-        <!-- About container -->
-        <div class="about-container main-container">
-          <div class="custom-width-container">
-            <div class="section-label s-labels">
-              <p><i class="fa-solid fa-user"></i>About</p>
-            </div>
-
-            <div class="about-content content-container">
-              <h2 class="about-heading">
-                Every engaging web experience is crafted with <br />
-                <span> Passion </span> and <span> Precision</span>
-              </h2>
-
-              <p class="about-me">
-                Since starting my career as a video editor and graphic designer,
-                I discovered my passion for visual storytelling. My interest in
-                design grew, and I transitioned into 3D visualization, where my
-                skills as a natural visualizer and strong imagination helped me
-                bring creative concepts to life. As my love for technology and
-                innovation deepened, I entered the world of IT development,
-                where I could combine my imagination and problem-solving
-                abilities to create engaging and user-centric web experiences.
-                I'm constantly learning and refining my skills, always pushing
-                myself to build better digital products.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Resume Section -->
-      <section class="resume-section" id="resume">
-        <!-- Resume container -->
-        <div class="resume-container main-container">
-          <div class="custom-width-container">
-            <div class="section-label s-labels">
-              <p><i class="fa-solid fa-briefcase"></i>Resume</p>
-            </div>
-
-            <div class="resume-content content-container">
-              <h2 class="resume-heading">
-                Education & <span>Experience</span>
-              </h2>
-
-              <div class="timeline-item" id="item-1">
-                <p class="timeline-date">2023 - 2024</p>
-                <h3 class="timeline-role">Career Break</h3>
-
-                <ul class="timeline-details">
-                  <li>
-                    Enhanced HTML, CSS, and JavaScript skills through online
-                    courses.
-                  </li>
-                  <li>
-                    Developed personal projects to apply and solidify concepts.
-                  </li>
-                </ul>
-              </div>
-
-              <div class="timeline-item" id="item-2">
-                <p class="timeline-date">2020 - 2023</p>
-                <h3 class="timeline-role">3D Visualizer</h3>
-                <p class="company-name">KCL Solution Pvt Ltd.</p>
-
-                <ul class="timeline-details">
-                  <li>
-                    Managed multiple projects, consistently meeting deadlines.
-                  </li>
-                  <li>
-                    Effectively prioritized tasks in fast-paced environments.
-                  </li>
-                </ul>
-              </div>
-
-              <div class="timeline-item" id="item-3">
-                <p class="timeline-date">2018 - 2020</p>
-                <h3 class="timeline-role">Video Editor & Graphic Designing</h3>
-                <p class="company-name">Freelancer</p>
-
-                <ul class="timeline-details">
-                  <li>
-                    Edited event and music videos, delivering polished cuts.
-                  </li>
-                  <li>
-                    Collaborated with clients to create visually aligned
-                    designs.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Services Section -->
-      <section class="services-section" id="services">
-        <!-- Service Container -->
-        <div class="services-container main-container">
-          <div class="custom-width-container">
-            <div class="section-label s-labels">
-              <p><i class="fa-solid fa-clipboard"></i>Services</p>
-            </div>
-
-            <div class="services-content content-container">
-              <h2 class="services-heading">My <span>Specializations</span></h2>
-            </div>
-
-            <div class="services-wrapper">
-              <div class="services-item">
-                <h3 class="service-title">
-                  Development <i class="fa-solid fa-code"></i>
-                </h3>
-                <p class="service-description">
-                  I create responsive, interactive websites using HTML, CSS,
-                  JavaScript, Bootstrap, and Sass.
-                </p>
-                <p class="project-count">25 Projects</p>
-              </div>
-
-              <div class="services-item">
-                <h3 class="service-title">
-                  3D Visualization <i class="fa-solid fa-panorama"></i>
-                </h3>
-                <p class="service-description">
-                  I create stunning 3D visualizations that effectively bring
-                  your concepts to life.
-                </p>
-                <p class="project-count">320 Projects</p>
-              </div>
-
-              <div class="services-item">
-                <h3 class="service-title">
-                  Graphic Designing <i class="fa-solid fa-pen-ruler"></i>
-                </h3>
-                <p class="service-description">
-                  I design impactful graphics that effectively communicate your
-                  brand message.
-                </p>
-                <p class="project-count">15 Projects</p>
-              </div>
-
-              <div class="services-item">
-                <h3 class="service-title">
-                  Video Editing <i class="fa-solid fa-video"></i>
-                </h3>
-                <p class="service-description">
-                  I deliver polished video edits that capture your story and
-                  engage your audience.
-                </p>
-                <p class="project-count">55 Projects</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Skills Section -->
-      <section class="skills-section" id="skills">
-        <!-- Skills Container -->
-        <div class="skills-container main-container">
-          <div class="custom-width-container">
-            <div class="section-label s-labels">
-              <p><i class="fa-solid fa-wand-magic-sparkles"></i>My Skills</p>
-            </div>
-
-            <div class="skills-content content-container">
-              <h2 class="skills-heading">My <span>Advantages</span></h2>
-            </div>
-
-            <div class="skills-wrapper">
-              <div class="skill-card">
-                <div class="skiils-icon">
-                  <img src="assets/icons/html.png" alt="html" />
-                </div>
-                <p class="skill-title">Html</p>
-              </div>
-
-              <div class="skill-card">
-                <div class="skiils-icon">
-                  <img src="assets/icons/css-3.png" alt="Css" />
-                </div>
-                <p class="skill-title">Css</p>
-              </div>
-
-              <div class="skill-card">
-                <div class="skiils-icon">
-                  <img src="assets/icons/bootstrap.png" alt="Bootstrap" />
-                </div>
-                <p class="skill-title">Bootstrap</p>
-              </div>
-
-              <div class="skill-card">
-                <div class="skiils-icon">
-                  <img src="assets/icons/sass.png" alt="Sass" />
-                </div>
-                <p class="skill-title">Sass</p>
-              </div>
-
-              <div class="skill-card">
-                <div class="skiils-icon">
-                  <img src="assets/icons/javascript.png" alt="Javascript" />
-                </div>
-                <p class="skill-title">Javascript</p>
-              </div>
-
-              <div class="skill-card">
-                <div class="skiils-icon">
-                  <img src="assets/icons/illustrator.png" alt="Illustrator" />
-                </div>
-                <p class="skill-title">Illustrator</p>
-              </div>
-
-              <div class="skill-card">
-                <div class="skiils-icon">
-                  <img src="assets/icons/photoshop.png" alt="Photoshop" />
-                </div>
-                <p class="skill-title">Photoshop</p>
-              </div>
-
-              <div class="skill-card">
-                <div class="skiils-icon">
-                  <img src="assets/icons/premier.png" alt="Premiere Pro" />
-                </div>
-                <p class="skill-title">Premiere Pro</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Portfolio Section -->
-      <section class="portfolio-section" id="portfolio">
-        <!-- Portfolio container -->
-        <div class="portfolio-container main-container">
-          <div class="custom-width-container">
-            <div class="section-label s-labels">
-              <p><i class="fa-brands fa-fort-awesome"></i>Portfolio</p>
-            </div>
-
-            <div class="portfolio-content content-container">
-              <h2 class="portfolio-heading">Featured <span> Projects</span></h2>
-            </div>
-
-            <div class="portfolio-wrapper">
-              <div class="portfolio-card">
-                <a
-                  class="portfolio-link"
-                  href="https://weathergaze.netlify.app/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <div class="portfolio-img-wrap">
-                    <img
-                      src="https://ucarecdn.com/949f6c85-32ab-45ac-9a12-b9fd726c97d1/-/preview/1000x714/"
-                      alt="Weather Gaze App"
-                    />
-
-                    <div class="tech-tags">
-                      <span class="tech-tag">Html</span>
-                      <span class="tech-tag">Css</span>
-                      <span class="tech-tag">Sass</span>
-                      <span class="tech-tag">Javascript</span>
-                    </div>
-                  </div>
-                  Weather Gaze | Weather Dashboard <sup>[Live]</sup>
-                </a>
-              </div>
-
-              <div class="portfolio-card">
-                <a
-                  class="portfolio-link"
-                  href="https://miteshp98.github.io/crowdfunding-product-page-main/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <div class="portfolio-img-wrap">
-                    <img
-                      src="https://ucarecdn.com/53493446-52c5-4ce6-be01-9b5e0b442ebe/-/preview/667x1000/"
-                      alt="CrowdFunding App"
-                    />
-
-                    <div class="tech-tags">
-                      <span class="tech-tag">Html</span>
-                      <span class="tech-tag">Css</span>
-                      <span class="tech-tag">Javascript</span>
-                    </div>
-                  </div>
-
-                  Crowdfunding Product Page <sup>[Live]</sup>
-                </a>
-              </div>
-
-              <div class="portfolio-card">
-                <a
-                  class="portfolio-link"
-                  href="https://to-do-app-challenge.netlify.app/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <div class="portfolio-img-wrap">
-                    <img
-                      src="https://ucarecdn.com/f3520071-5674-46ba-a0ea-77928eae158d/-/preview/667x1000/"
-                      alt="To Do App"
-                    />
-
-                    <div class="tech-tags">
-                      <span class="tech-tag">Html</span>
-                      <span class="tech-tag">Css</span>
-                      <span class="tech-tag">Javascript</span>
-                    </div>
-                  </div>
-
-                  To Do App <sup>[Live]</sup>
-                </a>
-              </div>
-
-              <div class="portfolio-card">
-                <a
-                  class="portfolio-link"
-                  href="https://rooflyrealestate.netlify.app/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <div class="portfolio-img-wrap">
-                    <img
-                      src="https://ucarecdn.com/2b2e3fd3-3327-4228-b3eb-c1fffb114530/-/preview/960x720/"
-                      alt="Roofly Real estate"
-                    />
-
-                    <div class="tech-tags">
-                      <span class="tech-tag">Html</span>
-                      <span class="tech-tag">Tailwind Css</span>
-                      <span class="tech-tag">Javascript</span>
-                      <span class="tech-tag">Contentful(CMS)</span>
-                    </div>
-                  </div>
-
-                  Roofly Real Estate <sup>[Live]</sup>
-                </a>
-              </div>
-
-              <div class="portfolio-card">
-                <a
-                  class="portfolio-link"
-                  href="https://tastynchill.netlify.app/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <div class="portfolio-img-wrap">
-                    <img
-                      src="https://ucarecdn.com/7c2b29da-786b-48a8-9141-a1022f645fe5/-/preview/1000x666/"
-                      alt="Taste N Chill Site"
-                    />
-
-                    <div class="tech-tags">
-                      <span class="tech-tag">Html</span>
-                      <span class="tech-tag">Css</span>
-                      <span class="tech-tag">Javascript</span>
-                    </div>
-                  </div>
-
-                  TastyNChill: Savor the Chill in Every Bite <sup>[Live]</sup>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Contact Section -->
-      <section class="contact-section" id="contact">
-        <!-- Contact container -->
-        <div class="contact-container main-container">
-          <div class="custom-width-container">
-            <div class="section-label s-labels">
-              <p><i class="fa-solid fa-envelope"></i>Contact</p>
-            </div>
-
-            <div class="contact-content content-container">
-              <h2 class="contact-heading">Let's Work <span>Together!</span></h2>
-              <a href="mailto: miteshpanchal3d@gmail.com" class="contact-email"
-                >miteshpanchal3d@gmail.com</a
-              >
-            </div>
-
-            <div class="contact-form-container">
-              <h3 class="contact-title">Fill this form out</h3>
-              <form action="https://formspree.io/f/xvgozrbq" method="POST">
-                <label for="name">Full Name <sup>*</sup></label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  class="input-field name-input"
-                  placeholder="Name"
-                  autocomplete="off"
-                />
-                <span class="input-error-msg"></span>
-
-                <label for="email">Email <sup>*</sup></label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="input-field email-input"
-                  required
-                  placeholder="Email"
-                  autocomplete="off"
-                />
-                <span class="input-error-msg"></span>
-
-                <label for="message">Message </label>
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Message"
-                  class="input-field message-textarea"
-                  maxlength="250"
-                  autocomplete="off"
-                  required
-                ></textarea>
-                <span class="input-error-msg"></span>
-
-                <button type="submit" class="submit-btn contact-submit-btn">
-                  Send Email
+                    <i class="fa-solid fa-bars"></i>
                 </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
 
-    <script type="module" src="js/app.js" defer></script>
-  </body>
+                <!-- Navigation wrapper -->
+                <nav
+                    class="main-navigation fade-in-right"
+                    role="navigation"
+                    aria-labelledby="nav-toggle-btn"
+                >
+                    <div class="nav-wrapper">
+                        <div class="nav-header">
+                            <!-- Btn to close nav -->
+                            <p class="nav-title">Menu</p>
+                            <button
+                                class="nav-close-btn"
+                                aria-controls="main-navigation"
+                                aria-label="Close menu"
+                            >
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+
+                        <!-- Navigation List -->
+                        <ul class="nav-list">
+                            <!-- List -->
+                            <li class="nav-item">
+                                <a
+                                    href="#home"
+                                    class="nav-link page-link active"
+                                    data-scroll
+                                    aria-current="page"
+                                >
+                                    <i class="fa-solid fa-house"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#about" class="nav-link page-link" data-scroll>
+                                    <i class="fa-solid fa-user"></i>
+                                    <span>About</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#resume" class="nav-link page-link" data-scroll>
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>Resume</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#services" class="nav-link page-link" data-scroll>
+                                    <i class="fa-solid fa-clipboard"></i>
+                                    <span>Services</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#skills" class="nav-link page-link" data-scroll>
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                    <span>Skills</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#portfolio" class="nav-link page-link" data-scroll>
+                                    <i class="fa-brands fa-fort-awesome"></i>
+                                    <span>Portfolio</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#contact" class="nav-link page-link" data-scroll>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Social Links -->
+                        <div class="social-media-wrap">
+                            <p class="social-title">Social</p>
+                            <!-- Wrapper -->
+                            <div class="social-links">
+                                <a
+                                    href="https://www.instagram.com/_mitesh_p/"
+                                    class="social-media-link"
+                                    target="_blank"
+                                    rel="noopener"
+                                    ><i class="fa-brands fa-instagram"></i
+                                ></a>
+                                <a
+                                    href="https://www.linkedin.com/in/mitesh-panchal-356558126/"
+                                    class="social-media-link"
+                                    target="_blank"
+                                    rel="noopener"
+                                    ><i class="fa-brands fa-linkedin"></i
+                                ></a>
+                                <a
+                                    href="https://github.com/miteshp98"
+                                    class="social-media-link"
+                                    target="_blank"
+                                    rel="noopener"
+                                    ><i class="fa-brands fa-github"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="profile-card d-profile-card">
+                <div class="profile-card-header">
+                    <p class="profile-name">Mitesh <sup>M</sup></p>
+                    <p class="profile-title">Frontend Developer</p>
+                </div>
+
+                <div class="profile-image-container">
+                    <img src="assets/images/my-image.png" alt="Mitesh Panchal" />
+                </div>
+
+                <p class="profile-location">Based in Ahmedabad, Gujarat</p>
+                <p class="copyright-text">&copy; 2024 Mitesh, All Rights Reserved</p>
+
+                <div class="profile-social-links">
+                    <a href="https://www.instagram.com/_mitesh_p/" target="_blank" rel="noopener"
+                        ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                    <a
+                        href="https://www.linkedin.com/in/mitesh-panchal-356558126/"
+                        target="_blank"
+                        rel="noopener"
+                        ><i class="fa-brands fa-linkedin"></i
+                    ></a>
+                    <a href="https://github.com/miteshp98" target="_blank" rel="noopener"
+                        ><i class="fa-brands fa-github"></i
+                    ></a>
+                </div>
+
+                <a class="hire-me-btn page-link" href="#contact" data-scroll>
+                    <i class="fa-regular fa-envelope"></i>Hire Me!
+                </a>
+            </div>
+        </header>
+        <!-- Main Content -->
+
+        <main>
+            <!-- Home section -->
+            <section class="home-section" id="home">
+                <!-- hero container -->
+                <div class="hero-wrapper main-container">
+                    <div class="custom-width-container">
+                        <div class="section-label">
+                            <p><i class="fa-solid fa-house"></i>Introduce</p>
+                        </div>
+
+                        <div class="hero-content">
+                            <h1 class="hero-heading">
+                                Say Hi From<span> Mitesh </span>, <br />
+                                Frontend Developer
+                            </h1>
+                            <p class="hero-description">
+                                I create visually appealing and user-centric web interfaces. My
+                                focus is on designing and coding efficient, high-quality
+                                experiences. Simplicity and performance drive my passion for web
+                                development.
+                            </p>
+                        </div>
+
+                        <div class="hero-call-to-action">
+                            <a
+                                href="#portfolio"
+                                data-scroll
+                                class="cta-portfolio-btn page-link"
+                                aria-label="Go to my portfolio section"
+                            >
+                                <img
+                                    src="assets/images/circular-text.png"
+                                    alt="My Portfolio circular text"
+                                    class="cta-image"
+                                />
+                                <i class="fa-solid fa-arrow-down-long" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About Section -->
+            <section class="about-section" id="about">
+                <!-- About container -->
+                <div class="about-container main-container">
+                    <div class="custom-width-container">
+                        <div class="section-label s-labels">
+                            <p><i class="fa-solid fa-user"></i>About</p>
+                        </div>
+
+                        <div class="about-content content-container">
+                            <h2 class="about-heading">
+                                Every engaging web experience is crafted with <br />
+                                <span> Passion </span> and <span> Precision</span>
+                            </h2>
+
+                            <p class="about-me">
+                                Since starting my career as a video editor and graphic designer, I
+                                discovered my passion for visual storytelling. My interest in design
+                                grew, and I transitioned into 3D visualization, where my skills as a
+                                natural visualizer and strong imagination helped me bring creative
+                                concepts to life. As my love for technology and innovation deepened,
+                                I entered the world of IT development, where I could combine my
+                                imagination and problem-solving abilities to create engaging and
+                                user-centric web experiences. I'm constantly learning and refining
+                                my skills, always pushing myself to build better digital products.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Resume Section -->
+            <section class="resume-section" id="resume">
+                <!-- Resume container -->
+                <div class="resume-container main-container">
+                    <div class="custom-width-container">
+                        <div class="section-label s-labels">
+                            <p><i class="fa-solid fa-briefcase"></i>Resume</p>
+                        </div>
+
+                        <div class="resume-content content-container">
+                            <h2 class="resume-heading">Education & <span>Experience</span></h2>
+
+                            <div class="timeline-item" id="item-1">
+                                <p class="timeline-date">2023 - 2024</p>
+                                <h3 class="timeline-role">Career Break</h3>
+
+                                <ul class="timeline-details">
+                                    <li>
+                                        Enhanced HTML, CSS, and JavaScript skills through online
+                                        courses.
+                                    </li>
+                                    <li>
+                                        Developed personal projects to apply and solidify concepts.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-item" id="item-2">
+                                <p class="timeline-date">2020 - 2023</p>
+                                <h3 class="timeline-role">3D Visualizer</h3>
+                                <p class="company-name">KCL Solution Pvt Ltd.</p>
+
+                                <ul class="timeline-details">
+                                    <li>
+                                        Managed multiple projects, consistently meeting deadlines.
+                                    </li>
+                                    <li>
+                                        Effectively prioritized tasks in fast-paced environments.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-item" id="item-3">
+                                <p class="timeline-date">2018 - 2020</p>
+                                <h3 class="timeline-role">Video Editor & Graphic Designing</h3>
+                                <p class="company-name">Freelancer</p>
+
+                                <ul class="timeline-details">
+                                    <li>
+                                        Edited event and music videos, delivering polished cuts.
+                                    </li>
+                                    <li>
+                                        Collaborated with clients to create visually aligned
+                                        designs.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Services Section -->
+            <section class="services-section" id="services">
+                <!-- Service Container -->
+                <div class="services-container main-container">
+                    <div class="custom-width-container">
+                        <div class="section-label s-labels">
+                            <p><i class="fa-solid fa-clipboard"></i>Services</p>
+                        </div>
+
+                        <div class="services-content content-container">
+                            <h2 class="services-heading">My <span>Specializations</span></h2>
+                        </div>
+
+                        <div class="services-wrapper">
+                            <div class="services-item">
+                                <h3 class="service-title">
+                                    Development <i class="fa-solid fa-code"></i>
+                                </h3>
+                                <p class="service-description">
+                                    I create responsive, interactive websites using HTML, CSS,
+                                    JavaScript, Bootstrap, and Sass.
+                                </p>
+                                <p class="project-count">25 Projects</p>
+                            </div>
+
+                            <div class="services-item">
+                                <h3 class="service-title">
+                                    3D Visualization <i class="fa-solid fa-panorama"></i>
+                                </h3>
+                                <p class="service-description">
+                                    I create stunning 3D visualizations that effectively bring your
+                                    concepts to life.
+                                </p>
+                                <p class="project-count">320 Projects</p>
+                            </div>
+
+                            <div class="services-item">
+                                <h3 class="service-title">
+                                    Graphic Designing <i class="fa-solid fa-pen-ruler"></i>
+                                </h3>
+                                <p class="service-description">
+                                    I design impactful graphics that effectively communicate your
+                                    brand message.
+                                </p>
+                                <p class="project-count">15 Projects</p>
+                            </div>
+
+                            <div class="services-item">
+                                <h3 class="service-title">
+                                    Video Editing <i class="fa-solid fa-video"></i>
+                                </h3>
+                                <p class="service-description">
+                                    I deliver polished video edits that capture your story and
+                                    engage your audience.
+                                </p>
+                                <p class="project-count">55 Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Skills Section -->
+            <section class="skills-section" id="skills">
+                <!-- Skills Container -->
+                <div class="skills-container main-container">
+                    <div class="custom-width-container">
+                        <div class="section-label s-labels">
+                            <p><i class="fa-solid fa-wand-magic-sparkles"></i>My Skills</p>
+                        </div>
+
+                        <div class="skills-content content-container">
+                            <h2 class="skills-heading">My <span>Advantages</span></h2>
+                        </div>
+
+                        <div class="skills-wrapper">
+                            <div class="skill-card">
+                                <div class="skiils-icon">
+                                    <img src="assets/icons/html.png" alt="html" />
+                                </div>
+                                <p class="skill-title">Html</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skiils-icon">
+                                    <img src="assets/icons/css-3.png" alt="Css" />
+                                </div>
+                                <p class="skill-title">Css</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skiils-icon">
+                                    <img src="assets/icons/bootstrap.png" alt="Bootstrap" />
+                                </div>
+                                <p class="skill-title">Bootstrap</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skiils-icon">
+                                    <img src="assets/icons/sass.png" alt="Sass" />
+                                </div>
+                                <p class="skill-title">Sass</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skiils-icon">
+                                    <img src="assets/icons/javascript.png" alt="Javascript" />
+                                </div>
+                                <p class="skill-title">Javascript</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skiils-icon">
+                                    <img src="assets/icons/illustrator.png" alt="Illustrator" />
+                                </div>
+                                <p class="skill-title">Illustrator</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skiils-icon">
+                                    <img src="assets/icons/photoshop.png" alt="Photoshop" />
+                                </div>
+                                <p class="skill-title">Photoshop</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skiils-icon">
+                                    <img src="assets/icons/premier.png" alt="Premiere Pro" />
+                                </div>
+                                <p class="skill-title">Premiere Pro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Portfolio Section -->
+            <section class="portfolio-section" id="portfolio">
+                <!-- Portfolio container -->
+                <div class="portfolio-container main-container">
+                    <div class="custom-width-container">
+                        <div class="section-label s-labels">
+                            <p><i class="fa-brands fa-fort-awesome"></i>Portfolio</p>
+                        </div>
+
+                        <div class="portfolio-content content-container">
+                            <h2 class="portfolio-heading">Featured <span> Projects</span></h2>
+                        </div>
+
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-card">
+                                <a
+                                    class="portfolio-link"
+                                    href="https://miteshp98.github.io/product-list-with-cart-main/"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    <div class="portfolio-img-wrap">
+                                        <img
+                                            src="https://ucarecdn.com/065e4fbd-0aca-4bd8-9ce6-0bec5ecd5fa9/-/preview/1000x714/"
+                                            alt="Product List With Cart"
+                                        />
+
+                                        <div class="tech-tags">
+                                            <span class="tech-tag">Html</span>
+                                            <span class="tech-tag">Css</span>
+                                            <span class="tech-tag">Javascript</span>
+                                        </div>
+                                    </div>
+                                    Product List | With Cart <sup>[Live]</sup>
+                                </a>
+                            </div>
+
+                            <div class="portfolio-card">
+                                <a
+                                    class="portfolio-link"
+                                    href="https://miteshp98.github.io/crowdfunding-product-page-main/"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    <div class="portfolio-img-wrap">
+                                        <img
+                                            src="https://ucarecdn.com/53493446-52c5-4ce6-be01-9b5e0b442ebe/-/preview/667x1000/"
+                                            alt="CrowdFunding App"
+                                        />
+
+                                        <div class="tech-tags">
+                                            <span class="tech-tag">Html</span>
+                                            <span class="tech-tag">Css</span>
+                                            <span class="tech-tag">Javascript</span>
+                                        </div>
+                                    </div>
+
+                                    Crowdfunding Product Page <sup>[Live]</sup>
+                                </a>
+                            </div>
+
+                            <div class="portfolio-card">
+                                <a
+                                    class="portfolio-link"
+                                    href="https://to-do-app-challenge.netlify.app/"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    <div class="portfolio-img-wrap">
+                                        <img
+                                            src="https://ucarecdn.com/f3520071-5674-46ba-a0ea-77928eae158d/-/preview/667x1000/"
+                                            alt="To Do App"
+                                        />
+
+                                        <div class="tech-tags">
+                                            <span class="tech-tag">Html</span>
+                                            <span class="tech-tag">Css</span>
+                                            <span class="tech-tag">Javascript</span>
+                                        </div>
+                                    </div>
+
+                                    To Do App <sup>[Live]</sup>
+                                </a>
+                            </div>
+
+                            <div class="portfolio-card">
+                                <a
+                                    class="portfolio-link"
+                                    href="https://rooflyrealestate.netlify.app/"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    <div class="portfolio-img-wrap">
+                                        <img
+                                            src="https://ucarecdn.com/2b2e3fd3-3327-4228-b3eb-c1fffb114530/-/preview/960x720/"
+                                            alt="Roofly Real estate"
+                                        />
+
+                                        <div class="tech-tags">
+                                            <span class="tech-tag">Html</span>
+                                            <span class="tech-tag">Tailwind Css</span>
+                                            <span class="tech-tag">Javascript</span>
+                                            <span class="tech-tag">Contentful(CMS)</span>
+                                        </div>
+                                    </div>
+
+                                    Roofly Real Estate <sup>[Live]</sup>
+                                </a>
+                            </div>
+
+                            <div class="portfolio-card">
+                                <a
+                                    class="portfolio-link"
+                                    href="https://tastynchill.netlify.app/"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    <div class="portfolio-img-wrap">
+                                        <img
+                                            src="https://ucarecdn.com/7c2b29da-786b-48a8-9141-a1022f645fe5/-/preview/1000x666/"
+                                            alt="Taste N Chill Site"
+                                        />
+
+                                        <div class="tech-tags">
+                                            <span class="tech-tag">Html</span>
+                                            <span class="tech-tag">Css</span>
+                                            <span class="tech-tag">Javascript</span>
+                                        </div>
+                                    </div>
+
+                                    TastyNChill: Savor the Chill in Every Bite <sup>[Live]</sup>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Section -->
+            <section class="contact-section" id="contact">
+                <!-- Contact container -->
+                <div class="contact-container main-container">
+                    <div class="custom-width-container">
+                        <div class="section-label s-labels">
+                            <p><i class="fa-solid fa-envelope"></i>Contact</p>
+                        </div>
+
+                        <div class="contact-content content-container">
+                            <h2 class="contact-heading">Let's Work <span>Together!</span></h2>
+                            <a href="mailto: miteshpanchal3d@gmail.com" class="contact-email"
+                                >miteshpanchal3d@gmail.com</a
+                            >
+                        </div>
+
+                        <div class="contact-form-container">
+                            <h3 class="contact-title">Fill this form out</h3>
+                            <form action="https://formspree.io/f/xvgozrbq" method="POST">
+                                <label for="name">Full Name <sup>*</sup></label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    class="input-field name-input"
+                                    placeholder="Name"
+                                    autocomplete="off"
+                                />
+                                <span class="input-error-msg"></span>
+
+                                <label for="email">Email <sup>*</sup></label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    class="input-field email-input"
+                                    required
+                                    placeholder="Email"
+                                    autocomplete="off"
+                                />
+                                <span class="input-error-msg"></span>
+
+                                <label for="message">Message </label>
+                                <textarea
+                                    name="message"
+                                    id="message"
+                                    placeholder="Message"
+                                    class="input-field message-textarea"
+                                    maxlength="250"
+                                    autocomplete="off"
+                                    required
+                                ></textarea>
+                                <span class="input-error-msg"></span>
+
+                                <button type="submit" class="submit-btn contact-submit-btn">
+                                    Send Email
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script type="module" src="js/app.js" defer></script>
+    </body>
 </html>
